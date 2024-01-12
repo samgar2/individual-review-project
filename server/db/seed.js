@@ -63,8 +63,8 @@ const buildDb = async () => {
         await dropTables()
         await createTables()
 
-        // await createInitialCharacters()
         // await createInitialBooks()
+        // await createInitialCharacters()
         // await createInitialOutfits()
 
     } catch (error) {
