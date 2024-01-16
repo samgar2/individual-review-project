@@ -18,16 +18,16 @@ const books = [
 
 //outfits
 const outfits = [
-    {name: "#", characterId: 1, bookId: 1, image: "#"},
-    {name: "#", characterId: 1, bookId: 1, image: "#"},
-    {name: "#", characterId: 2, bookId: 2, image: "#"},
-    {name: "#", characterId: 2, bookId: 2, image: "#"},
-    {name: "#", characterId: 3, bookId: 3, image: "#"},
-    {name: "#", characterId: 3, bookId: 3, image: "#"},
-    {name: "#", characterId: 4, bookId: 4, image: "#"},
-    {name: "#", characterId: 4, bookId: 4, image: "#"},
-    {name: "#", characterId: 5, bookId: 5, image: "#"},
-    {name: "#", characterId: 5, bookId: 5, image: "#"}
+    {name: "fgfg", characterId: 1, bookId: 1, image: "#"},
+    {name: "adad", characterId: 1, bookId: 1, image: "#"},
+    {name: "qwqw", characterId: 2, bookId: 2, image: "#"},
+    {name: "erer", characterId: 2, bookId: 2, image: "#"},
+    {name: "tyty", characterId: 3, bookId: 3, image: "#"},
+    {name: "uiui", characterId: 3, bookId: 3, image: "#"},
+    {name: "jkjk", characterId: 4, bookId: 3, image: "#"},
+    {name: "lmlm", characterId: 4, bookId: 3, image: "#"},
+    {name: "fgfg", characterId: 5, bookId: 3, image: "#"},
+    {name: "nmnm", characterId: 5, bookId: 3, image: "#"}
 ]
 
 //export our mock data variables for use elsewhere

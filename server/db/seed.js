@@ -1,6 +1,8 @@
 //pulling in the connection to my local database
 const client = require('./client')
 
+const { books, characters, outfits } = require('./seedData')
+
 //Drop tables for data cleanliness
 const dropTables = async () => {
     try {
@@ -40,7 +42,7 @@ const createTables = async () => {
         CREATE TABLE outfits (
             "outfitId" SERIAL PRIMARY KEY,
             "characterId" INTEGER REFERENCES characters("characterId") NOT NULL,
-            "bookId" INTEGER REFERENCES books("bookId"),
+            "bookId" INTEGER REFERENCES books("bookId") NOT NULL,
             name varchar(100) NOT NULL,
             image text NOT NULL
         );
@@ -52,6 +54,62 @@ const createTables = async () => {
 }
 
 //Populate tables to have data later :)
+//Create books
+const createInitialBooks = async () => {
+    try {
+        for (const book of books) {
+            console.log(book)
+            const {
+                rows: [books]
+            } = await client.query(`
+                INSERT INTO books(title, bio, image)
+                VALUES($1, $2, $3);
+            `, [book.title, book.bio, book.image]
+            )
+        }
+        console.log("created books")
+    }catch (error) {
+        throw error
+    }
+}
+
+//Create characters
+const createInitialCharacters = async () => {
+    try {
+        for (const character of characters) {
+            console.log(character)
+            const {
+                rows: [characters]
+            } = await client.query(`
+                INSERT INTO characters(name, "bookId", description, quote, image)
+                VALUES($1, $2, $3, $4, $5);
+            `, [character.name, character.bookId, character.description, character.quote, character.image]
+            )
+        }
+        console.log("created characters")
+    }catch (error) {
+        throw error
+    }
+}
+
+//Create outfits
+const createInitialOutfits = async () => {
+    try {
+        for (const outfit of outfits) {
+            console.log(outfit)
+            const {
+                rows: [outfits]
+            } = await client.query(`
+                INSERT INTO outfits(name, "characterId", "bookId", image)
+                VALUES($1, $2, $3, $4);
+            `, [outfit.name, outfit.characterId, outfit.bookId, outfit.image]
+            )
+        }
+        console.log("created outfits")
+    }catch (error) {
+        throw error
+    }
+}
 
 //Call all my functions to build my database
 const buildDb = async () => {
@@ -63,9 +121,9 @@ const buildDb = async () => {
         await dropTables()
         await createTables()
 
-        // await createInitialBooks()
-        // await createInitialCharacters()
-        // await createInitialOutfits()
+        await createInitialBooks()
+        await createInitialCharacters()
+        await createInitialOutfits()
 
     } catch (error) {
         console.error(error)
