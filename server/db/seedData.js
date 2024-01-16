@@ -26,7 +26,7 @@ const outfits = [
     {name: "uiui", characterId: 3, bookId: 3, image: "#"},
     {name: "jkjk", characterId: 4, bookId: 3, image: "#"},
     {name: "lmlm", characterId: 4, bookId: 3, image: "#"},
-    {name: "fgfg", characterId: 5, bookId: 3, image: "#"},
+    {name: "opop", characterId: 5, bookId: 3, image: "#"},
     {name: "nmnm", characterId: 5, bookId: 3, image: "#"}
 ]
 
