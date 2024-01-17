@@ -18,16 +18,16 @@ const books = [
 
 //outfits
 const outfits = [
-    {name: "fgfg", characterId: 1, bookId: 1, image: "#"},
-    {name: "adad", characterId: 1, bookId: 1, image: "#"},
-    {name: "qwqw", characterId: 2, bookId: 2, image: "#"},
-    {name: "erer", characterId: 2, bookId: 2, image: "#"},
-    {name: "tyty", characterId: 3, bookId: 3, image: "#"},
-    {name: "uiui", characterId: 3, bookId: 3, image: "#"},
-    {name: "jkjk", characterId: 4, bookId: 3, image: "#"},
-    {name: "lmlm", characterId: 4, bookId: 3, image: "#"},
-    {name: "opop", characterId: 5, bookId: 3, image: "#"},
-    {name: "nmnm", characterId: 5, bookId: 3, image: "#"}
+    {name: "fgfg", bookId: 1, image: "#"},
+    {name: "adad", bookId: 1, image: "#"},
+    {name: "qwqw", bookId: 2, image: "#"},
+    {name: "erer", bookId: 2, image: "#"},
+    {name: "tyty", bookId: 3, image: "#"},
+    {name: "uiui", bookId: 3, image: "#"},
+    {name: "jkjk", bookId: 3, image: "#"},
+    {name: "lmlm", bookId: 3, image: "#"},
+    {name: "opop", bookId: 3, image: "#"},
+    {name: "nmnm", bookId: 3, image: "#"}
 ]
 
 //export our mock data variables for use elsewhere

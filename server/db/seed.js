@@ -41,7 +41,6 @@ const createTables = async () => {
 
         CREATE TABLE outfits (
             "outfitId" SERIAL PRIMARY KEY,
-            "characterId" INTEGER REFERENCES characters("characterId") NOT NULL,
             "bookId" INTEGER REFERENCES books("bookId") NOT NULL,
             name varchar(100) NOT NULL,
             image text NOT NULL
@@ -100,9 +99,9 @@ const createInitialOutfits = async () => {
             const {
                 rows: [outfits]
             } = await client.query(`
-                INSERT INTO outfits(name, "characterId", "bookId", image)
-                VALUES($1, $2, $3, $4);
-            `, [outfit.name, outfit.characterId, outfit.bookId, outfit.image]
+                INSERT INTO outfits(name, "bookId", image)
+                VALUES($1, $2, $3);
+            `, [outfit.name, outfit.bookId, outfit.image]
             )
         }
         console.log("created outfits")
