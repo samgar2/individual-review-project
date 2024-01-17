@@ -15,7 +15,6 @@ async function getAllCharacters() {
         throw err;
     }
 }
-
 // GET: show a single character
 async function getCharacterById(id) {
     try {
