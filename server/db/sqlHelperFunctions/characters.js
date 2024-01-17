@@ -17,12 +17,12 @@ async function getAllCharacters() {
 }
 
 // GET: show a single character
-async function getCharacterById(id) {
+async function getCharacterById(characterId) {
     try {
         const { rows: [character] } = await client.query(`
             SELECT * FROM characters
-            WHERE id = $1;
-        `, [id]);
+            WHERE "characterId"=$1;
+        `, [characterId]);
         return character;
     } catch (error) {
         throw error;
@@ -45,7 +45,7 @@ async function createCharacter(body) {
 }
 
 // PUT: update a single character
-async function updateCharacter(id, fields = {}) {
+async function updateCharacter(characterId, fields = {}) {
     const setString = Object.keys(fields).map((key, index) => `"${key}"=$${index + 1}`).join(', ');
     if (setString.length === 0) {
         return;
@@ -54,7 +54,7 @@ async function updateCharacter(id, fields = {}) {
         const { rows: [character] } = await client.query(`
             UPDATE characters
             SET ${setString}
-            WHERE id=${id}
+            WHERE "characterId"=${characterId}
             RETURNING *;
         `, Object.values(fields));
         return character;
@@ -64,13 +64,13 @@ async function updateCharacter(id, fields = {}) {
 }
 
 // DELETE: delete a single character
-async function deleteCharacter(id) {
+async function deleteCharacter(characterId) {
     try {
         const { rows: [character] } = await client.query(`
             DELETE FROM characters
-            WHERE id=$1
+            WHERE "characterId"=$1
             RETURNING *;
-        `, [id]);
+        `, [characterId]);
         return character;
     } catch (error) {
         throw error;

@@ -16,18 +16,5 @@ async function getAllOutfits() {
     }
 }
 
-// GET: show a single outfit
-async function getOutfitById(id) {
-    try {
-        const { rows: [outfit] } = await client.query(`
-            SELECT * FROM outfits
-            WHERE id = $1;
-        `, [id]);
-        return outfit;
-    } catch (error) {
-        throw error;
-    }
-}
-
 //export our funcions
-module.exports = { getAllOutfits, getOutfitById }
+module.exports = { getAllOutfits }
