@@ -12,7 +12,7 @@ router.use('/books', require('./books'));
 // ROUTER: /api/characters
 router.use('/characters', require('./characters'));
 
-// // ROUTER: /api/outfits
-// router.use('/outfits', require('./outfits'));
+// ROUTER: /api/outfits
+router.use('/outfits', require('./outfits'));
 
 module.exports = router;
