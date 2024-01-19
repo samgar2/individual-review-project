@@ -11,6 +11,10 @@ app.use(morgan('dev'));
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
+// init cors
+const cors = require('cors');
+app.use(cors());
+
 //Connecting to client
 const client = require('./db/client');
 client.connect();
