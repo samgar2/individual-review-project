@@ -26,7 +26,7 @@ const createTables = async () => {
         CREATE TABLE books (
             "bookId" SERIAL PRIMARY KEY,
             title varchar(50) UNIQUE NOT NULL,
-            bio varchar(255) NOT NULL,
+            date int NOT NULL,
             image text NOT NULL
         );
 
@@ -61,9 +61,9 @@ const createInitialBooks = async () => {
             const {
                 rows: [books]
             } = await client.query(`
-                INSERT INTO books(title, bio, image)
+                INSERT INTO books(title, date, image)
                 VALUES($1, $2, $3);
-            `, [book.title, book.bio, book.image]
+            `, [book.title, book.date, book.image]
             )
         }
         console.log("created books")
