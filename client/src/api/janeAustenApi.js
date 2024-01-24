@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 //Create an API using RTK Query
 export const janeAustenApi = createApi({
@@ -23,5 +23,5 @@ export const janeAustenApi = createApi({
 
 });
 
-//Destructure hooks from the API to export
+//Export hooks for each endpoint
 export const { useGetBooksQuery } = janeAustenApi
