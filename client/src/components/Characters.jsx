@@ -1,5 +1,6 @@
 import React from "react";
 import { useGetCharactersQuery } from "../api/janeAustenApi";
+import { Link } from "react-router-dom";
 
 export default function Characters() {
   const { data = {}, error, isLoading } = useGetCharactersQuery();
@@ -20,8 +21,11 @@ export default function Characters() {
           <img className="characterimage" src={character.image} alt="Character" />
           <h2>{character.name}</h2>
           <p>{character.bookId}</p>
-          <p>{character.description}</p>
-          <p>{character.quote}</p>
+
+          <button>
+            <Link to={`/characters/${character.characterId}`}>See Details</Link>
+          </button>
+
         </div>
       ))}
     </div>
