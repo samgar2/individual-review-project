@@ -6,19 +6,19 @@ const characters = [
     bookId: 1, 
     description: "The eldest daughter of the Bennet family.", 
     quote: "She had an 'affectionate heart' and 'united with great strength of feeling, a composure of temper and a uniform cheerfulness of manner.' -Jane Austen", 
-    image: "https://static.wikia.nocookie.net/janeausten/images/d/d7/Jane_Bennet.png/revision/latest?cb=20180108192548"},
+    image: "https://i.pinimg.com/originals/43/ff/96/43ff969afd412412f3047beda8989dc4.png"},
 
     {name: "Elizabeth Bennet", 
     bookId: 1, 
     description: "The second eldest daughter of the Bennet family.", 
     quote: "She had 'a lively, playful disposition, which delighted in any thing ridiculous', and had 'more quickness of observation and less pliancy of temper than her sister.' -Jane Austen", 
-    image: "https://static.wikia.nocookie.net/janeausten/images/e/e8/Elizabeth-bennet-miss-elizabeth.jpg/revision/latest?cb=20180108192643"},
+    image: "https://i.pinimg.com/564x/04/36/30/0436309a08d48c7772ad8f07745687d7.jpg"},
 
     {name: "Elinor Dashwood", 
     bookId: 2, 
     description: "The eldest daughter of the Dashwood family.", 
     quote: "She 'possessed a strength of understanding, and coolness of judgment. She had an excellent heart;- her disposition was affectionate, and her feelings were strong; but she knew how to govern them.' -Jane Austen", 
-    image: "https://static.wikia.nocookie.net/janeausten/images/a/a8/Colorelinor.jpg/revision/latest?cb=20120229010916"},
+    image: "https://hellomhello.files.wordpress.com/2014/04/ss2.jpg"},
 
     {name: "Marianne Dashwood", 
     bookId: 2, 

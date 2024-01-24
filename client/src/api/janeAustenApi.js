@@ -15,13 +15,29 @@ export const janeAustenApi = createApi({
   }),
   endpoints: (builder) => ({
     //Define our endpoints for the API
+    getCharacters: builder.query({
+        //get all characters
+        query: () => "/characters"
+      }),
+
+      getSingleCharacter: builder.query({
+        //get single character by id
+        query: (characterId) => `/characters/${characterId}`
+      }),
+  
     getBooks: builder.query({
       //get all books
       query: () => "/books"
     }),
+
+    getOutfits: builder.query({
+        //get all outfits
+        query: () => "/outfits"
+      }),
+
   }),
 
 });
 
 //Export hooks for each endpoint
-export const { useGetBooksQuery } = janeAustenApi
+export const { useGetCharactersQuery, useGetSingleCharacterQuery, useGetBooksQuery, useGetOutfitsQuery } = janeAustenApi
