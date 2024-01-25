@@ -30,27 +30,27 @@ export const janeAustenApi = createApi({
       query: (data) => ({
         url: "/characters",
         method: "POST",
-        body: {data },
+        body: {...data },
       }),
     }),
 
-    // updateCharacter: builder.mutation({
-    //   //update characters
-    //   query: (data) => ({
-    //     url: "/:characterId",
-    //     method: "PATCH",
-    //     body: { data },
-    //   }),
-    // }),
+    updateCharacter: builder.mutation({
+      //update characters
+      query: (data) => ({
+        url: `/characters/${characterId}`,
+        method: "PATCH",
+        body: {...data},
+      }),
+    }),
 
-    // deleteCharacter: builder.mutation({
-    //   //delete character
-    //   query: (data) => ({
-    //     url: "/:characterId",
-    //     method: "DELETE",
-    //     body: { data },
-    //   }),
-    // }),
+    deleteCharacter: builder.mutation({
+      //delete character
+      query: (data) => ({
+        url: `/characters/${characterId}`,
+        method: "DELETE",
+        body: {...data},
+      }),
+    }),
 
     getBooks: builder.query({
       //get all books
@@ -69,9 +69,8 @@ export const {
   useGetCharactersQuery,
   useGetSingleCharacterQuery,
   useCreateCharacterMutation,
-  //   useUpdateCharacterMutation,
-  //   useDeleteCharacterMutation,
-
+  useUpdateCharacterMutation,
+  useDeleteCharacterMutation,
   useGetBooksQuery,
   useGetOutfitsQuery,
 } = janeAustenApi;
