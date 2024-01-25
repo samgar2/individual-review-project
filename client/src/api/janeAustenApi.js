@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 //Create an API using RTK Query
 export const janeAustenApi = createApi({
@@ -16,28 +16,62 @@ export const janeAustenApi = createApi({
   endpoints: (builder) => ({
     //Define our endpoints for the API
     getCharacters: builder.query({
-        //get all characters
-        query: () => "/characters"
-      }),
+      //get all characters
+      query: () => "/characters",
+    }),
 
-      getSingleCharacter: builder.query({
-        //get single character by id
-        query: (characterId) => `/characters/${characterId}`
+    getSingleCharacter: builder.query({
+      //get single character by id
+      query: (characterId) => `/characters/${characterId}`,
+    }),
+
+    createCharacter: builder.mutation({
+      //create a new character
+      query: (data) => ({
+        url: "/characters",
+        method: "POST",
+        body: {data },
       }),
-  
+    }),
+
+    // updateCharacter: builder.mutation({
+    //   //update characters
+    //   query: (data) => ({
+    //     url: "/:characterId",
+    //     method: "PATCH",
+    //     body: { data },
+    //   }),
+    // }),
+
+    // deleteCharacter: builder.mutation({
+    //   //delete character
+    //   query: (data) => ({
+    //     url: "/:characterId",
+    //     method: "DELETE",
+    //     body: { data },
+    //   }),
+    // }),
+
     getBooks: builder.query({
       //get all books
-      query: () => "/books"
+      query: () => "/books",
     }),
 
     getOutfits: builder.query({
-        //get all outfits
-        query: () => "/outfits"
-      }),
-
+      //get all outfits
+      query: () => "/outfits",
+    }),
   }),
-
 });
 
 //Export hooks for each endpoint
-export const { useGetCharactersQuery, useGetSingleCharacterQuery, useGetBooksQuery, useGetOutfitsQuery } = janeAustenApi
+export const {
+  useGetCharactersQuery,
+  useGetSingleCharacterQuery,
+  useCreateCharacterMutation,
+  //   useUpdateCharacterMutation,
+  //   useDeleteCharacterMutation,
+
+  useGetBooksQuery,
+  useGetOutfitsQuery,
+} = janeAustenApi;

@@ -2,6 +2,8 @@ import React from "react";
 import { useGetSingleCharacterQuery } from "../api/janeAustenApi";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+// import { useUpdateCharacterMutation } from "../api/janeAustenApi";
+// import { useDeleteCharacterMutation } from "../api/janeAustenApi";
 
 export default function SingleCharacter() {
   const { characterId } = useParams()
