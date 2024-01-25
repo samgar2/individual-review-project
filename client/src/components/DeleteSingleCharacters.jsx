@@ -36,8 +36,9 @@ export default function NewCharacters() {
 
   return (
     <div className="delete">
-        <button onClick={() => navigate("/characters")}>Back to All Characters</button>
+        <button onClick={() => deleteCharacter(character.characterId) }>Delete Character</button>
         </div>
+
       )}
 
 

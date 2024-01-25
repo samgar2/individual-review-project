@@ -2,8 +2,18 @@ import React from "react";
 import { useGetSingleCharacterQuery } from "../api/janeAustenApi";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useDeleteCharacterMutation } from "../api/janeAustenApi";
+import { useUpdateCharacterMutation } from "../api/janeAustenApi";
 
 export default function SingleCharacter() {
+  //update single character
+  const [updateCharacter] = useUpdateCharacterMutation();
+  
+  //delete single character
+  const [deleteCharacter] = useDeleteCharacterMutation()
+
+  //get single character
   const { characterId } = useParams()
     const { data = {}, error, isLoading } = useGetSingleCharacterQuery(characterId);
   
@@ -24,12 +34,9 @@ export default function SingleCharacter() {
           <p>{data.book}</p>
           <p>{data.description}</p>
           <p>{data.quote}</p>
-
-          <button>
-            <Link to="/characters">Back To All Characters</Link>
-          </button>
+          <button><Link to="/characters">Back To All Characters</Link></button>
+          <button onClick={() => deleteCharacter(data.characterId) }>Delete Character</button>
         </div>
-      
       </div>
     );
     }

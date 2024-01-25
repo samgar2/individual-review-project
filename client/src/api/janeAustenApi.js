@@ -36,19 +36,19 @@ export const janeAustenApi = createApi({
 
     updateCharacter: builder.mutation({
       //update characters
-      query: (data) => ({
+      query: (characterId) => ({
         url: `/characters/${characterId}`,
         method: "PATCH",
-        body: {...data},
+        body: {...characterId},
       }),
     }),
 
     deleteCharacter: builder.mutation({
       //delete character
-      query: (data) => ({
+      query: (characterId) => ({
         url: `/characters/${characterId}`,
         method: "DELETE",
-        body: {...data},
+        body: {...characterId},
       }),
     }),
 
