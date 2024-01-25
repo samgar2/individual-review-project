@@ -29,13 +29,13 @@ async function getCharacterById(characterId) {
 
 // POST: create a new character
 async function createCharacter(body) {
-    const { name, bookId, description, quote, image } = body;
+    const { name, bookId, book, description, quote, image } = body;
     try {
         const { rows: [character] } = await client.query(`
-            INSERT INTO characters(name, "bookId", description, quote, image)
-            VALUES($1, $2, $3, $4, $5)
+            INSERT INTO characters(name, "bookId", book, description, quote, image)
+            VALUES($1, $2, $3, $4, $5, $6)
             RETURNING *;
-        `, [name, bookId, description, quote, image]);
+        `, [name, bookId, book, description, quote, image]);
         return character;
     } catch (error) {
         throw error;

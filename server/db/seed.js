@@ -34,6 +34,7 @@ const createTables = async () => {
             "characterId" SERIAL PRIMARY KEY,
             "bookId" INTEGER REFERENCES books("bookId") NOT NULL,
             name varchar(50) NOT NULL,
+            book varchar(50) NOT NULL,
             description varchar(255) NOT NULL,
             quote varchar(255) NOT NULL,
             image text NOT NULL
@@ -80,9 +81,9 @@ const createInitialCharacters = async () => {
             const {
                 rows: [characters]
             } = await client.query(`
-                INSERT INTO characters(name, "bookId", description, quote, image)
-                VALUES($1, $2, $3, $4, $5);
-            `, [character.name, character.bookId, character.description, character.quote, character.image]
+                INSERT INTO characters(name, "bookId", book, description, quote, image)
+                VALUES($1, $2, $3, $4, $5, $6);
+            `, [character.name, character.bookId, character.book, character.description, character.quote, character.image]
             )
         }
         console.log("created characters")

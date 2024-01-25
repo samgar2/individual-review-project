@@ -1,7 +1,9 @@
 export default function Home() {
   return (
     <>
-      <div></div>
+      <div>
+        <h1>Jane Austen's Characters</h1>
+      </div>
     </>
   );
 }
