@@ -6,7 +6,7 @@ export const janeAustenApi = createApi({
   reducerPath: "janeAustenApi",
   //Set the base URL for API requests
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://jane-austen.onrender.com/api",
+    baseUrl: "https://jane-austen.onrender.com/api",
     //Set headers
     prepareHeaders(headers) {
       headers.set("Content-type", "application/json");
