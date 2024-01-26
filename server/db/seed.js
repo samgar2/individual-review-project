@@ -32,7 +32,7 @@ const createTables = async () => {
 
         CREATE TABLE characters (
             "characterId" SERIAL PRIMARY KEY,
-            "bookId" INTEGER REFERENCES books("bookId") NOT NULL,
+            "bookId" INTEGER REFERENCES books("bookId"),
             name varchar(50) NOT NULL,
             book varchar(50) NOT NULL,
             description varchar(255) NOT NULL,
@@ -42,7 +42,7 @@ const createTables = async () => {
 
         CREATE TABLE outfits (
             "outfitId" SERIAL PRIMARY KEY,
-            "bookId" INTEGER REFERENCES books("bookId") NOT NULL,
+            "bookId" INTEGER REFERENCES books("bookId"),
             name varchar(100) NOT NULL,
             image text NOT NULL
         );
