@@ -13,6 +13,7 @@ export default function Characters() {
   const [quote, setQuote] = useState("");
 
   const [createCharacter] = useCreateCharacterMutation();
+  const { data = {}, error, isLoading } = useGetCharactersQuery();
 
   async function handleCreate(e) {
     e.preventDefault();
@@ -29,10 +30,10 @@ export default function Characters() {
       console.error(error);
     }
   }
+
+  // useGetCharactersQuery(); recall this in some way at the end of my create, update, and delete functionalities to automatically refresh the page
   
   //get all characters
-  const { data = {}, error, isLoading } = useGetCharactersQuery();
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -66,7 +67,7 @@ export default function Characters() {
 
       <div className="newCharacters">
         <form onSubmit={handleCreate}>
-          <h1>Create Your Own Character!</h1>
+          <h1>Create Your Own Character</h1>
           <p>Come up with a character that you think Jane Austen might have written today, a character that could have existed in one of her previous books, or feel free to make up your own! Pick out an image from Google that represents your character and plop the image url in the Image box down below.</p>
           <label>
             Image Url:

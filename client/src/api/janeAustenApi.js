@@ -18,11 +18,13 @@ export const janeAustenApi = createApi({
     getCharacters: builder.query({
       //get all characters
       query: () => "/characters",
+      providesTags: ["Characters"]
     }),
 
     getSingleCharacter: builder.query({
       //get single character by id
       query: (characterId) => `/characters/${characterId}`,
+      providesTags: ["Character"]
     }),
 
     createCharacter: builder.mutation({
@@ -32,6 +34,7 @@ export const janeAustenApi = createApi({
         method: "POST",
         body: {...data },
       }),
+      invalidatesTags: ["Characters"]
     }),
 
     updateCharacter: builder.mutation({
@@ -41,6 +44,7 @@ export const janeAustenApi = createApi({
         method: "PUT",
         body: {...characterId},
       }),
+      invalidatesTags: ["Character"]
     }),
 
     deleteCharacter: builder.mutation({
@@ -50,6 +54,7 @@ export const janeAustenApi = createApi({
         method: "DELETE",
         body: {...characterId},
       }),
+      invalidatesTags: ["Characters"]
     }),
 
     getBooks: builder.query({

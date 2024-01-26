@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useDeleteCharacterMutation } from "../api/janeAustenApi";
 import { useUpdateCharacterMutation } from "../api/janeAustenApi";
+import { useNavigate } from "react-router-dom";
 
 export default function SingleCharacter() {
   //update single character
@@ -15,6 +16,7 @@ export default function SingleCharacter() {
   const [quote, setQuote] = useState("");
 
   const [updateCharacter] = useUpdateCharacterMutation();
+  const navigate = useNavigate();
 
   async function handleUpdate(e) {
     e.preventDefault();
@@ -58,7 +60,7 @@ export default function SingleCharacter() {
           <p>{data.description}</p>
           <p>{data.quote}</p>
           <button><Link to="/characters">Back To All Characters</Link></button>
-          <button onClick={() => deleteCharacter(data.characterId) }>Delete Character</button>
+          <button onClick={() => { deleteCharacter(data.characterId); navigate("/characters")} }>Delete Character</button>
         </div>
 
         <div className="updateCharacters">
