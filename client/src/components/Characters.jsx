@@ -58,7 +58,7 @@ export default function Characters() {
 
             <button>
               <Link to={`/characters/${character.characterId}`}>
-                See Details
+                See Details 
               </Link>
             </button>
           </div>

@@ -61,7 +61,7 @@ const outfits = [
 
     {name: "Lace Hat With Blue Coat and Gloves", 
     bookId: 1, 
-    image: "https://i.pinimg.com/564x/e4/ce/18/e4ce18d859c7be2555903d8efba792b5.jpg"},
+    image: "https://i.pinimg.com/736x/d5/5b/58/d55b588a595e864cd166be4d750d0e17.jpg"},
 
     {name: "Brown Dress With Book", 
     bookId: 1, 

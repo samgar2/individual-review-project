@@ -11,15 +11,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url("https://film-grab.com/wp-content/uploads/photo-gallery/Pride__Prejudice_026.jpg?bwg=1569601078");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgb(138, 154, 91);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: rgb(138, 154, 91);
 }
 
 body {
@@ -35,6 +41,36 @@ h1 {
   line-height: 1.1;
 }
 
+.allCharacters { 
+  display: grid;
+  padding: 0;
+}
+
+.characterimage {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.books { 
+  display: grid;
+  padding: 0;
+}
+
+.bookimage {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.outfits { 
+  display: grid;
+  padding: 0;
+}
+
+.outfitimage {
+  max-width: 60%;
+  max-height: 60%;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -42,27 +78,28 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
   cursor: pointer;
   transition: border-color 0.25s;
+  color:  rgb(138, 154, 91);
 }
 button:hover {
-  border-color: #646cff;
+  border-color: rgb(138, 154, 91);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: rgb(138, 154, 91);
   }
   button {
     background-color: #f9f9f9;
   }
-}
+} */
