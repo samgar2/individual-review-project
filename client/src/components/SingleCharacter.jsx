@@ -56,7 +56,7 @@ export default function SingleCharacter() {
         <div key={data.characterId} className="character">
           <img className="characterimage" src={data.image} alt="Character" />
           <h2>{data.name}</h2>
-          <p>{data.book}</p>
+          <p>{data.book}</p>                                  
           <p>{data.description}</p>
           <p>{data.quote}</p>
           <button><Link to="/characters">Back To All Characters</Link></button>
