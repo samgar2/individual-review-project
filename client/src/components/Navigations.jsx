@@ -4,11 +4,13 @@ export default function Navigations() {
    
     return (
         <header>
-        <nav>           
+        <nav>  
+        <div className="nav-container">         
             <Link to='/'>Home</Link>
             <Link to='/characters'>Characters</Link>
             <Link to='/books'>Books</Link>
             <Link to='/outfits'>Outfits</Link>
+            </div>
         </nav>
         </header>
     )

@@ -23,9 +23,22 @@ a {
   font-weight: 500;
   color: rgb(138, 154, 91);
   text-decoration: inherit;
+  text-align: center;
 }
 a:hover {
   color: rgb(138, 154, 91);
+}
+
+.nav-container {
+  display:grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 1em;
+  border-style: solid;
+  border-color:white;
+  border-width: 1px;
+  padding: 5px;
 }
 
 body {
