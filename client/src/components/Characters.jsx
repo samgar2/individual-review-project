@@ -68,7 +68,7 @@ export default function Characters() {
       <div className="newCharacters">
         <form onSubmit={handleCreate}>
           <h1>Create Your Own Character</h1>
-          <p>Come up with a character that you think Jane Austen might have written today, a character that could have existed in one of her previous books, or feel free to make up your own! Pick out an image from Google that represents your character and plop the image url in the Image box down below.</p>
+          <p>Think about a character Jane Austen might have written today, a character that could have existed in one of her previous books, or feel free to make up your own! Pick out an image that represents your character and plop the link in the Image Url box down below.</p>
           <label>
             Image Url:
             <input
