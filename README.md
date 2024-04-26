@@ -6,7 +6,7 @@ Link to deployed site:
 
 Description:
 
-- A website where I got to explore my creativity and showce full-stack web-development skills
+- A website featuring Jane Austen's books and characters, where I got to explore my creativity and showcase the full-stack web-development skills I'd learned thus far in my bootcamp.
 
 Features:
 
