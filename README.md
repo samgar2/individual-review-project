@@ -13,4 +13,8 @@ Features:
 - Check out books written by Jane Austen
 - Read about some of my favorite characters
 - View their outfits from film adaptations
-- Create, update, and delete your own characters 
+- Create, update, and delete your own characters
+
+Brought to you by:
+
+- Samantha Garabedian
