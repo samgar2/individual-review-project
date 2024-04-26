@@ -11,6 +11,9 @@ A website where I got to explore my creativity and showce full-stack web-develop
 Features:
 
 Check out books written by Jane Austen
-Read about some of my favorite characters 
+
+Read about some of my favorite characters
+
 View their outfits from film adaptations
+
 Create, update, and delete your own characters 
